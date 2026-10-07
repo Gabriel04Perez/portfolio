@@ -12,3 +12,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+nav {
+  display: flex;
+}
+
+nav a {
+  flex: 1;
+}
