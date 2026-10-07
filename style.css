@@ -94,3 +94,86 @@ form button {
 .projects h2 {
   margin: 0;
 }
+
+/* Resume */
+.resume section {
+  margin-block: 2em;
+}
+
+.resume h2 {
+  color: var(--color-accent);
+  font-size: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.resume article {
+  margin-block: 1.5em;
+}
+
+/* Title and date on one line, subtitle below; wraps on narrow screens */
+.resume article header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 1em;
+}
+
+.resume header h3,
+.resume header p {
+  margin: 0;
+}
+
+.resume header p:nth-of-type(2) {
+  order: 1;
+  color: oklch(50% 3% 200);
+  font-size: 90%;
+}
+
+.resume header p:first-of-type {
+  order: 2;
+  flex-basis: 100%;
+}
+
+.resume article ul {
+  margin-block: 0.5em 0;
+  padding-inline-start: 1.25em;
+}
+
+.resume li::marker {
+  color: var(--color-accent);
+}
+
+/* Nested lists (coursework) as tags */
+.resume li ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  list-style: none;
+  margin-block: 0.4em;
+  padding: 0;
+}
+
+.resume li li {
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em;
+  font-size: 90%;
+}
+
+.resume dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1.5em;
+}
+
+.resume dt {
+  font-weight: bold;
+}
+
+.resume dd {
+  margin: 0;
+}
