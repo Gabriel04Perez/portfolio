@@ -116,3 +116,33 @@ export async function fetchJSON(url) {
     console.error('Error fetching or parsing JSON data:', error);
   }
 }
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!(containerElement instanceof Element)) {
+    console.error('renderProjects: containerElement is not a DOM element');
+    return;
+  }
+
+  // Only allow real heading tags (h1–h6)
+  if (!/^h[1-6]$/.test(headingLevel)) {
+    headingLevel = 'h2';
+  }
+
+  // Clear existing content so re-rendering doesn't duplicate projects
+  containerElement.innerHTML = '';
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    return;
+  }
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image ?? 'https://dsc106.com/labs/lab02/images/empty.svg'}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}

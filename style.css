@@ -101,7 +101,7 @@ form button {
   grid-row: span 3;
 }
 
-.projects h2 {
+.projects :is(h1, h2, h3, h4, h5, h6) {
   margin: 0;
 }
 
