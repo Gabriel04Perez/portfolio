@@ -105,6 +105,26 @@ form button {
   margin: 0;
 }
 
+/* GitHub stats: labels on the first row, numbers on the second */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: oklch(50% 3% 200);
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 250%;
+}
+
 /* Resume */
 .resume section {
   margin-block: 2em;
