@@ -24,16 +24,16 @@
     "description": "Qualcomm Snapdragon Workshop. Trained a language model using the LoRA and DoRA parameter-efficient fine-tuning methods and compared their trade-offs for efficient model customization."
   },
   {
-    "title": "Relational Database Analysis",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "DSC 100. Wrote and benchmarked 11 SQL queries in PostgreSQL against a ~1.15M-row flights dataset and the Chinook music-store database, then created indexes and compared query runtimes."
-  },
-  {
     "title": "Lending Risk Detection",
     "year": "2026",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "LPL Financial 4th Annual Hackathon. Designed and prototyped a lending risk detection system in a 24-hour team hackathon, integrating large language models with AWS cloud infrastructure."
+  },
+  {
+    "title": "Relational Database Analysis",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 100. Wrote and benchmarked 11 SQL queries in PostgreSQL against a ~1.15M-row flights dataset and the Chinook music-store database, then created indexes and compared query runtimes."
   },
   {
     "title": "Project Gutenberg Web Scraper",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Image Processing Toolkit & KNN Classifier",
-    "year": "2024",
+    "year": "2025",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "DSC 20. Co-designed an object-oriented image processing toolkit in Python with an RGBImage class and inheritance-based transformations, and implemented a KNN image classifier from scratch."
   },
