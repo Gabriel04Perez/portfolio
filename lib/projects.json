@@ -1,62 +1,74 @@
 [
   {
+    "title": "Persuasive vs. Deceptive CO₂ Visualizations",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 106 Project 2. Built paired persuasive charts arguing for and against the claim that U.S. CO₂ emissions are no longer a growing climate problem, using U.S. emissions, trade, and fossil-fuel subsidy data in pandas and Plotly, and documented which design choices were earnest and which were deceptive."
+  },
+  {
+    "title": "GroceryDB Expository Visualization",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 106 Project 1. Designed a static expository visualization of GroceryDB with pandas and Plotly, examining how ultra-processed foods (NOVA classification) show up across the shelves, prices, and nutrition of major U.S. grocery stores."
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 106 Labs. Built this site with semantic HTML, modern CSS (grid, subgrid, automatic dark mode), and JavaScript modules that render projects from a JSON file and pull live stats from the GitHub API."
+  },
+  {
+    "title": "LLM Fine-Tuning with LoRA & DoRA",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Qualcomm Snapdragon Workshop. Trained a language model using the LoRA and DoRA parameter-efficient fine-tuning methods and compared their trade-offs for efficient model customization."
+  },
+  {
+    "title": "Relational Database Analysis",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 100. Wrote and benchmarked 11 SQL queries in PostgreSQL against a ~1.15M-row flights dataset and the Chinook music-store database, then created indexes and compared query runtimes."
+  },
+  {
+    "title": "Lending Risk Detection",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "LPL Financial 4th Annual Hackathon. Designed and prototyped a lending risk detection system in a 24-hour team hackathon, integrating large language models with AWS cloud infrastructure."
+  },
+  {
+    "title": "Project Gutenberg Web Scraper",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 80. Built a requests-based scraper for Project Gutenberg books that paces requests to respect robots.txt, using regular expressions to strip boilerplate and isolate each book's text."
+  },
+  {
+    "title": "Gradebook Data Processing System",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 80. Built a pandas grade calculator for heterogeneous assignment data with normalization, weighting, and redemption logic, validated against real course CSV data."
+  },
+  {
+    "title": "Graph Algorithms & Single-Linkage Clustering",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 40B. Implemented single-linkage clustering via Kruskal's algorithm with a disjoint-set forest, plus BFS/DFS routines for bipartite 2-coloring and weight-filtered connected components."
+  },
+  {
+    "title": "Image Processing Toolkit & KNN Classifier",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 20. Co-designed an object-oriented image processing toolkit in Python with an RGBImage class and inheritance-based transformations, and implemented a KNN image classifier from scratch."
+  },
+  {
     "title": "Lorem ipsum dolor sit.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quos ab deserunt consectetur debitis aut tempora, cupiditate obcaecati illum. Blanditiis voluptate earum veniam, cumque et sapiente. Minima reiciendis ex cumque?"
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quos ab deserunt consectetur debitis aut tempora, cupiditate obcaecati illum."
   },
   {
     "title": "Non eum tempore ipsa.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Enim voluptatum tenetur id saepe doloremque. Ea magni suscipit natus pariatur hic incidunt adipisci tempora ipsa numquam. Culpa accusantium nisi magnam optio repudiandae? Ducimus placeat est molestias suscipit, dolor ab?"
-  },
-  {
-    "title": "Esse cumque eaque magnam.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Fugit ab aut quaerat laboriosam cupiditate minus fuga in. Quaerat molestias expedita enim provident soluta placeat. At aliquam a voluptate facilis. Exercitationem distinctio error, fugit assumenda neque quo unde cum?"
-  },
-  {
-    "title": "Placeat aspernatur a sequi.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Perferendis ad iusto esse a doloribus corrupti dicta vero. Fugit nobis vitae tempora sit quos enim aperiam. Libero assumenda nulla quae necessitatibus quod culpa, fugit repudiandae. Nesciunt molestiae consectetur rerum."
-  },
-  {
-    "title": "Modi ab deserunt dolorem.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Voluptate mollitia assumenda doloribus sint. Eaque obcaecati natus non, nemo dolor corporis voluptatum. Vero nam dolor quod corrupti odit repellendus, officia ea blanditiis mollitia. Incidunt aliquid vitae fuga sunt veniam."
-  },
-  {
-    "title": "Consequatur magnam voluptatem laborum.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Voluptate cupiditate eum odio, quisquam odit harum accusantium nemo? Fuga accusamus veritatis rerum architecto numquam perferendis animi. Fugit veniam odio nobis, praesentium expedita inventore reiciendis sapiente saepe molestiae asperiores sunt?"
-  },
-  {
-    "title": "Doloremque eveniet nesciunt impedit?",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Consequatur non doloremque dolore hic? A iusto blanditiis pariatur ex magni ut hic repudiandae id impedit? Similique vitae facilis esse. Cupiditate sed magni fuga aliquam velit recusandae nobis alias non?"
-  },
-  {
-    "title": "Impedit tenetur corporis ratione.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Ad tempora suscipit harum perspiciatis esse quam, modi itaque. Consequuntur minus aliquam incidunt exercitationem asperiores ut officiis repellendus porro vero dolore. Nesciunt similique quisquam nobis provident rem sed reiciendis aliquam."
-  },
-  {
-    "title": "Sit sequi quaerat adipisci?",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Praesentium rerum id repudiandae quidem. Harum quas eaque nulla ipsa soluta. Sed maiores itaque delectus eius reprehenderit corrupti eos accusamus aut voluptatum dolorum. Alias minima aut nostrum totam accusantium corporis."
-  },
-  {
-    "title": "Dolor porro esse rem?",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Recusandae voluptatum molestias voluptate assumenda odit provident voluptatem quisquam. At fuga facere deleniti esse laborum, iste suscipit perspiciatis perferendis. Error tempora earum aut odio debitis ipsam, veniam fuga eaque necessitatibus."
-  },
-  {
-    "title": "Voluptatem quibusdam dolores tenetur.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Quibusdam ab ad dicta. Nobis sit quo quidem quia. Eos facere amet ratione hic. Odit laboriosam quo eum totam nobis, reiciendis at debitis excepturi tenetur. Nisi velit sequi laborum itaque?"
-  },
-  {
-    "title": "Illum quidem error dicta?",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Aliquid incidunt dolorum voluptatem molestiae distinctio ab pariatur sit adipisci atque minus? Sint animi nesciunt voluptate quas. Ut eligendi maxime sapiente animi voluptas consequuntur, optio mollitia ad nihil voluptatem odit."
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project. Enim voluptatum tenetur id saepe doloremque. Ea magni suscipit natus pariatur hic incidunt adipisci tempora ipsa numquam."
   }
 ]
