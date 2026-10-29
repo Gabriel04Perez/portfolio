@@ -156,6 +156,14 @@ form button {
   border-radius: 50%;
 }
 
+.searchBar {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 1em;
+  padding: 0.5em;
+}
+
 /* GitHub stats: labels on the first row, numbers on the second */
 #profile-stats dl {
   display: grid;
