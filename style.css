@@ -105,6 +105,13 @@ form button {
   margin: 0;
 }
 
+.project-year {
+  margin: 0;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: oklch(50% 3% 200);
+}
+
 /* GitHub stats: labels on the first row, numbers on the second */
 #profile-stats dl {
   display: grid;
