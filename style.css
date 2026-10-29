@@ -112,6 +112,13 @@ form button {
   color: oklch(50% 3% 200);
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
 /* GitHub stats: labels on the first row, numbers on the second */
 #profile-stats dl {
   display: grid;
