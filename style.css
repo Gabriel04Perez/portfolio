@@ -127,6 +127,16 @@ form button {
 
   path {
     transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+/* Clicked wedge and its legend item */
+.selected {
+  --color: oklch(60% 60% 330) !important;
+
+  &:is(path) {
+    fill: var(--color);
   }
 }
 
@@ -153,6 +163,7 @@ form button {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  cursor: pointer;
 }
 
 .legend-item em {

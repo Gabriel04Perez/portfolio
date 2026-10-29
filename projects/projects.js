@@ -14,6 +14,7 @@ projectsTitle.textContent = `${count} ${count === 1 ? 'Project' : 'Projects'}`;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+let selectedIndex = -1;
 
 // Draw the pie chart and legend of projects per year
 function renderPieChart(projectsGiven) {
@@ -38,8 +39,26 @@ function renderPieChart(projectsGiven) {
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
 
-  newArcs.forEach((arc, idx) => {
-    svg.append('path').attr('d', arc).attr('fill', colors(idx));
+  // Select the clicked wedge, or deselect it if it was already selected
+  function toggleSelection(i) {
+    selectedIndex = selectedIndex === i ? -1 : i;
+
+    svg
+      .selectAll('path')
+      .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+    legend
+      .selectAll('li')
+      .attr('class', (_, idx) =>
+        idx === selectedIndex ? 'legend-item selected' : 'legend-item',
+      );
+  }
+
+  newArcs.forEach((arc, i) => {
+    svg
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', colors(i))
+      .on('click', () => toggleSelection(i));
   });
 
   newData.forEach((d, idx) => {
@@ -47,7 +66,8 @@ function renderPieChart(projectsGiven) {
       .append('li')
       .attr('style', `--color:${colors(idx)}`)
       .attr('class', 'legend-item')
-      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+      .on('click', () => toggleSelection(idx));
   });
 }
 
