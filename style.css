@@ -117,6 +117,17 @@ form button {
   margin-block: 2em;
 
   overflow: visible;
+
+  /* Fade out the other wedges while one is hovered */
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+
+  path {
+    transition: 300ms;
+  }
 }
 
 /* Pie chart and legend side by side; legend wraps below on narrow screens */
