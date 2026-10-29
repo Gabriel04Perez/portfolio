@@ -119,6 +119,34 @@ form button {
   overflow: visible;
 }
 
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  margin-block: 1em;
+  padding: 1em;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  list-style: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend-item em {
+  color: oklch(50% 3% 200);
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
 /* GitHub stats: labels on the first row, numbers on the second */
 #profile-stats dl {
   display: grid;
