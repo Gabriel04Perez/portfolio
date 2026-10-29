@@ -51,6 +51,17 @@ function renderPieChart(projectsGiven) {
       .attr('class', (_, idx) =>
         idx === selectedIndex ? 'legend-item selected' : 'legend-item',
       );
+
+    if (selectedIndex === -1) {
+      renderProjects(projects, projectsContainer, 'h2');
+    } else {
+      // only show projects from the selected year
+      let selectedYear = newData[selectedIndex].label;
+      let yearProjects = projects.filter(
+        (project) => project.year === selectedYear,
+      );
+      renderProjects(yearProjects, projectsContainer, 'h2');
+    }
   }
 
   newArcs.forEach((arc, i) => {
