@@ -186,21 +186,25 @@ form button {
   padding: 0.5em;
 }
 
-/* GitHub stats: labels on the first row, numbers on the second */
-#profile-stats dl {
+/* Stats (GitHub stats on the home page, code stats on the meta page):
+   labels on the first row, numbers on the second, one column per stat */
+#profile-stats dl,
+.stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: 1fr;
   margin: 0;
 }
 
-#profile-stats dt {
+#profile-stats dt,
+.stats dt {
   grid-row: 1;
   font-size: 80%;
   text-transform: uppercase;
   color: oklch(50% 3% 200);
 }
 
-#profile-stats dd {
+#profile-stats dd,
+.stats dd {
   grid-row: 2;
   margin: 0;
   font-size: 250%;
