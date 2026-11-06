@@ -292,3 +292,12 @@ form button {
 .resume dd {
   margin: 0;
 }
+
+/* Meta page scatterplot: faint grid lines that don't compete with the dots */
+.gridlines .tick line {
+  stroke-opacity: 0.15;
+}
+
+.gridlines .domain {
+  display: none;
+}
