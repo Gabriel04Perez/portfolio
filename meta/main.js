@@ -118,10 +118,35 @@ function updateTooltipPosition(event) {
   tooltip.style.top = `${event.clientY}px`;
 }
 
+// Scatterplot scales. Declared out here (and set in renderScatterPlot)
+// so the brush functions can use them too
+let xScale;
+let yScale;
+
+// Is the commit's dot inside the brush selection?
+function isCommitSelected(selection, commit) {
+  if (!selection) {
+    return false;
+  }
+  // selection is [[x0, y0], [x1, y1]]: the top-left and bottom-right corners
+  const [[x0, y0], [x1, y1]] = selection;
+  const x = xScale(commit.datetime);
+  const y = yScale(commit.hourFrac);
+  return x >= x0 && x <= x1 && y >= y0 && y <= y1;
+}
+
+// Called whenever the brush starts, moves, or ends
+function brushed(event) {
+  const selection = event.selection;
+  d3.selectAll('circle').classed('selected', (d) =>
+    isCommitSelected(selection, d),
+  );
+}
+
 // Let the user drag a rectangle over the chart
 function createBrushSelector(svg) {
-  // Create brush
-  svg.call(d3.brush());
+  // Create brush and listen for its events
+  svg.call(d3.brush().on('start brush end', brushed));
 
   // The brush's overlay rect catches all mouse events, which blocks hovering the dots.
   // Raise dots and everything after overlay, so the overlay ends up beneath them
@@ -139,13 +164,13 @@ function renderScatterPlot(data, commits) {
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('overflow', 'visible');
 
-  const xScale = d3
+  xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, (d) => d.datetime))
     .range([0, width])
     .nice();
 
-  const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+  yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
 
   // Leave room around the plot for the axes
   const margin = { top: 10, right: 10, bottom: 30, left: 20 };

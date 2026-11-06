@@ -359,6 +359,11 @@ circle:hover {
   transform: scale(1.5);
 }
 
+/* Dots inside the brush selection */
+circle.selected {
+  fill: #ff6b6b;
+}
+
 /* Brush selection rectangle with "marching ants" */
 @keyframes marching-ants {
   to {
