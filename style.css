@@ -325,6 +325,13 @@ dl.info dt {
   position: fixed;
   top: 1em;
   left: 1em;
+
+  /* Raised, frosted-glass card; canvas keeps it readable in light and dark mode */
+  background-color: color-mix(in oklch, canvas 80%, transparent);
+  backdrop-filter: blur(0.5em);
+  box-shadow: 0 0.25em 1em oklch(0% 0 0 / 15%);
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
 }
 
 /* Grow the hovered dot from its center */
