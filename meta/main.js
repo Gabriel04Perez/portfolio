@@ -162,9 +162,13 @@ function renderScatterPlot(data, commits) {
   // Create gridlines as an axis with no labels and full-width ticks
   gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
-  // Dot size shows how many lines each commit edited
+  // Dot size shows how many lines each commit edited.
+  // A square root scale makes the dot's area (not its radius) proportional to the lines
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
-  const rScale = d3.scaleLinear().domain([minLines, maxLines]).range([2, 30]);
+  const rScale = d3
+    .scaleSqrt()
+    .domain([minLines, maxLines])
+    .range([2, 30]);
 
   const dots = svg.append('g').attr('class', 'dots');
 
