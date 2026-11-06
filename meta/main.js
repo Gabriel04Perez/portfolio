@@ -105,6 +105,12 @@ function renderTooltipContent(commit) {
   lines.textContent = commit.totalLines;
 }
 
+// Show or hide the tooltip
+function updateTooltipVisibility(isVisible) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.hidden = !isVisible;
+}
+
 // Scatterplot of commits: date on the X axis, time of day on the Y axis
 function renderScatterPlot(data, commits) {
   const width = 1000;
@@ -161,9 +167,10 @@ function renderScatterPlot(data, commits) {
     .attr('fill', 'steelblue')
     .on('mouseenter', (event, commit) => {
       renderTooltipContent(commit);
+      updateTooltipVisibility(true);
     })
     .on('mouseleave', () => {
-      // TODO: Hide the tooltip
+      updateTooltipVisibility(false);
     });
 
   // Create the axes

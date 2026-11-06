@@ -307,6 +307,16 @@ dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.25em 1em;
+
+  /* Fade in and out instead of popping */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+/* Hidden unless the pointer or focus is in it (so its link stays clickable) */
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 dl.info dt,
