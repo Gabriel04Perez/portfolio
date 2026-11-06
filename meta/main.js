@@ -102,6 +102,22 @@ function renderScatterPlot(data, commits) {
 
   const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
 
+  // Leave room around the plot for the axes
+  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+
+  const usableArea = {
+    top: margin.top,
+    right: width - margin.right,
+    bottom: height - margin.bottom,
+    left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
+  };
+
+  // Update scales with new ranges (before drawing, so the dots stay inside the axes)
+  xScale.range([usableArea.left, usableArea.right]);
+  yScale.range([usableArea.bottom, usableArea.top]);
+
   const dots = svg.append('g').attr('class', 'dots');
 
   dots
@@ -112,6 +128,25 @@ function renderScatterPlot(data, commits) {
     .attr('cy', (d) => yScale(d.hourFrac))
     .attr('r', 5)
     .attr('fill', 'steelblue');
+
+  // Create the axes
+  const xAxis = d3.axisBottom(xScale);
+  // Format hours as times, e.g. 9 -> 09:00 and 24 -> 00:00
+  const yAxis = d3
+    .axisLeft(yScale)
+    .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
+
+  // Add X axis
+  svg
+    .append('g')
+    .attr('transform', `translate(0, ${usableArea.bottom})`)
+    .call(xAxis);
+
+  // Add Y axis
+  svg
+    .append('g')
+    .attr('transform', `translate(${usableArea.left}, 0)`)
+    .call(yAxis);
 }
 
 let data = await loadData();
