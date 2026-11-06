@@ -135,12 +135,27 @@ function isCommitSelected(selection, commit) {
   return x >= x0 && x <= x1 && y >= y0 && y <= y1;
 }
 
+// Show how many commits are selected, and return them
+function renderSelectionCount(selection) {
+  const selectedCommits = selection
+    ? commits.filter((d) => isCommitSelected(selection, d))
+    : [];
+
+  const countElement = document.querySelector('#selection-count');
+  countElement.textContent = `${
+    selectedCommits.length || 'No'
+  } commits selected`;
+
+  return selectedCommits;
+}
+
 // Called whenever the brush starts, moves, or ends
 function brushed(event) {
   const selection = event.selection;
   d3.selectAll('circle').classed('selected', (d) =>
     isCommitSelected(selection, d),
   );
+  renderSelectionCount(selection);
 }
 
 // Let the user drag a rectangle over the chart
