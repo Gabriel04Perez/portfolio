@@ -118,6 +118,11 @@ function updateTooltipPosition(event) {
   tooltip.style.top = `${event.clientY}px`;
 }
 
+// Let the user drag a rectangle over the chart
+function createBrushSelector(svg) {
+  svg.call(d3.brush());
+}
+
 // Scatterplot of commits: date on the X axis, time of day on the Y axis
 function renderScatterPlot(data, commits) {
   const width = 1000;
@@ -214,6 +219,9 @@ function renderScatterPlot(data, commits) {
     .append('g')
     .attr('transform', `translate(${usableArea.left}, 0)`)
     .call(yAxis);
+
+  // Set up brushing once everything else is drawn
+  createBrushSelector(svg);
 }
 
 let data = await loadData();
