@@ -301,3 +301,39 @@ form button {
 .gridlines .domain {
   display: none;
 }
+
+/* Commit info: labels in the first column, values in the second */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+}
+
+dl.info dt,
+dl.info dd {
+  margin: 0;
+}
+
+/* Labels are less prominent than the values */
+dl.info dt {
+  font-size: 85%;
+  color: oklch(50% 3% 200);
+}
+
+/* Pinned to the top left of the viewport, whatever the scroll position */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+/* Grow the hovered dot from its center */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
