@@ -120,7 +120,12 @@ function updateTooltipPosition(event) {
 
 // Let the user drag a rectangle over the chart
 function createBrushSelector(svg) {
+  // Create brush
   svg.call(d3.brush());
+
+  // The brush's overlay rect catches all mouse events, which blocks hovering the dots.
+  // Raise dots and everything after overlay, so the overlay ends up beneath them
+  svg.selectAll('.dots, .overlay ~ *').raise();
 }
 
 // Scatterplot of commits: date on the X axis, time of day on the Y axis
