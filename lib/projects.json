@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "image": "images/bikewatching.jpg",
+    "url": "https://gabriel04perez.github.io/Bike_Watch/",
+    "description": "DSC 106 Lab 7. Built an interactive Mapbox map of about 260,000 Bluebikes trips in Boston and Cambridge from March 2024, with a D3 SVG overlay where circle size shows station traffic, color shows whether a station sees more departures or arrivals, and a time-of-day slider filters the trips."
+  },
+  {
     "title": "Persuasive vs. Deceptive CO₂ Visualizations",
     "year": "2026",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
@@ -15,6 +22,7 @@
     "title": "Personal Portfolio Website",
     "year": "2026",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "url": "https://gabriel04perez.github.io/portfolio/",
     "description": "DSC 106 Labs. Built this site with semantic HTML, modern CSS (grid, subgrid, automatic dark mode), and JavaScript modules that render projects from a JSON file and pull live stats from the GitHub API."
   },
   {
