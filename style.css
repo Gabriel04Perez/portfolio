@@ -378,3 +378,27 @@ circle.selected {
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
 }
+
+/* Time filter slider: label and slider on one line, selected time below on the right */
+#commit-filter {
+  display: flex;
+  align-items: baseline;
+
+  label {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 1em;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  time {
+    flex-basis: 100%;
+    margin-left: auto;
+    text-align: right;
+  }
+}
