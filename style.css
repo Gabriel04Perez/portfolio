@@ -477,3 +477,8 @@ circle.selected {
   bottom: auto;
   height: 50vh;
 }
+
+/* Space out the story so each commit gets its own moment on screen */
+.step {
+  padding-bottom: 3em;
+}
