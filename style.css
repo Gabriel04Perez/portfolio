@@ -452,3 +452,28 @@ circle.selected {
   background: var(--color);
   border-radius: 50%;
 }
+
+/* Scrollytelling: story on the left, scatterplot on the right */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+/* Stays at the top of the screen while the story scrolls past.
+   It needs a height, or it stretches to the full story and has nowhere to stick */
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
