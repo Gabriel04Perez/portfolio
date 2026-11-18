@@ -363,6 +363,9 @@ function updateScatterPlot(data, commits) {
     });
 }
 
+// Color for each technology (css, html, js...), kept the same across updates
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
 // List each file touched by the given commits, with how many of its lines they wrote
 function updateFileDisplay(filteredCommits) {
   let lines = filteredCommits.flatMap((d) => d.lines);
@@ -399,7 +402,8 @@ function updateFileDisplay(filteredCommits) {
     .selectAll('div')
     .data((d) => d.lines)
     .join('div')
-    .attr('class', 'loc');
+    .attr('class', 'loc')
+    .attr('style', (d) => `--color: ${colors(d.type)}`);
 }
 
 let data = await loadData();
