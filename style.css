@@ -424,7 +424,31 @@ circle.selected {
     grid-column: 1;
   }
 
+  /* Line count under the file name, smaller and fainter */
+  small {
+    display: block;
+    font-size: 75%;
+    opacity: 0.7;
+  }
+
+  /* Dots wrap onto new rows and pack tightly */
   dd {
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
   }
+}
+
+/* One dot per line of code */
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
 }
