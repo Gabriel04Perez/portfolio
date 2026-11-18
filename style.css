@@ -407,3 +407,24 @@ circle.selected {
     text-align: right;
   }
 }
+
+/* Files on the meta page: names in the first column, line counts in the second.
+   Each file's dt/dd pair is wrapped in a div, so the div uses the dl's columns via subgrid */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+  }
+
+  dd {
+    grid-column: 2;
+  }
+}
