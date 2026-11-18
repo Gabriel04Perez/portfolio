@@ -353,6 +353,11 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+
+  /* New circles grow in from nothing instead of popping in */
+  @starting-style {
+    r: 0;
+  }
 }
 
 circle:hover {
