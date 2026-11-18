@@ -1,4 +1,5 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
 
 // Read loc.csv and convert the numeric and date columns from strings
 async function loadData() {
@@ -436,6 +437,12 @@ const selectedTime = document.getElementById('commit-time');
 function onTimeSliderChange() {
   commitProgress = Number(slider.value);
   commitMaxTime = timeScale.invert(commitProgress);
+  updateTimeFilter();
+}
+
+// Show the selected time and redraw everything with the commits made up to commitMaxTime
+// (shared by the slider and the scrollytelling)
+function updateTimeFilter() {
   selectedTime.textContent = commitMaxTime.toLocaleString('en', {
     dateStyle: 'long',
     timeStyle: 'short',
@@ -480,3 +487,19 @@ d3.select('#scatter-story')
 		Then I looked over all I had made, and I saw that it was very good.
 	`,
   );
+
+// When a commit's paragraph scrolls into view, show the commits made up to it
+function onStepEnter(response) {
+  commitMaxTime = response.element.__data__.datetime;
+  commitProgress = timeScale(commitMaxTime);
+  slider.value = commitProgress; // keep the slider in sync with the story
+  updateTimeFilter();
+}
+
+const scroller = scrollama();
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+  })
+  .onStepEnter(onStepEnter);
